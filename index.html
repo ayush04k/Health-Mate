@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loco.css">
+</head>
+<body>
+  <script src="https://cdn.botpress.cloud/webchat/v1/inject.js"></script>
+<script src="https://mediafiles.botpress.cloud/51e8248a-7b5e-4fa7-9f49-fadf08ba816c/webchat/config.js" defer></script>
+    <div class="main">
+        <nav>
+            <div class="leftnav">
+                <h1>HEALTH MATE</h1>
+            </div>
+            <div class="rightnav">
+                <a href="#">Chat Bot</a><a href="#">Disease Analysis</a><a href="#">Health Tips</a><a href="#">About Us</a>
+            </div>
+        </nav>
+        <div class="line"></div>
+        <div class="body">
+            <div class="banner">
+                <img src="https://static.vecteezy.com/system/resources/previews/000/608/082/original/vector-set-of-doctor-cartoon-characters-medical-staff-team-concept.jpg" alt="">
+            </div>
+            
+        </div>
+        <h2 id="head">Services we offer</h2>
+        <div class="cards">
+            <div class="card card2">
+                <div class="img">
+                  <img
+                    src="https://static.vecteezy.com/system/resources/previews/002/184/865/non_2x/hospital-on-white-background-free-vector.jpg"
+                    alt=""
+                  />
+                </div>
+               
+                <div class="heading">
+                  <h2 class="map">Find Hospitals near you</h2>
+                </div>
+               
+                
+              </div>
+            <div class="card card3 lab">
+                <div class="img">
+                  <img
+                    src="https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_lab_tests.png"
+                    alt=""
+                  />
+                </div>
+               
+                <div class="heading">
+                  <h2>Find Labs near you</h2>
+                </div>
+               
+            
+              </div>
+            <div class="card card4">
+                <div class="img">
+                  <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1r104bamd1_kCdG3cElkuPL7N3HJjjw1frNaE46aWp8tX2EjLvxCiFhzK2rYVm9OiThw&usqp=CAU"
+                    alt=""
+                  />
+                </div>
+               
+                <div class="heading">
+                  <h2><a href="http://127.0.0.1:5500/new/service.html">Avail services</a></h2>
+                </div>
+              
+              </div>
+              <div class="card card1">
+                <div class="img">
+                  <img
+                    src="https://i.pinimg.com/736x/7e/4e/eb/7e4eebfd3f66d18b69139a332974d43b.jpg"
+                    alt=""
+                  />
+                </div>
+               
+                <div class="heading">
+                  <h2><a href="chatbot.html">Chat Bot</a></h2>
+                </div>
+               
+             
+              </div>
+        </div>
+        <div class="diseasetracker">
+            <h2>Track the following diseases</h2>
+            <div class="circles">
+                <div class="circle">
+                    <img src="https://www.practostatic.com/acred/search-assets/2/12-mental-wellness.png" alt="">
+                    <h3>Parkinson's Disease</h3>
+                    <button> <a href="http://localhost:8501/">Track</a></button>
+                </div>
+                <div class="circle">
+                    <img src="https://media.istockphoto.com/id/1448657772/vector/diabetes-care-vector-element-concept-design-template.jpg?s=612x612&w=0&k=20&c=cajECTOIVSy1PlvYJOyzN30Mfjp8EBbXsMsE6Cs6-Fo=" alt="">
+                    <h3>Diabetes</h3>
+                   <button> <a href="http://localhost:8501/">Track</a></button>
+                </div>
+                <div class="circle">
+                    <img src="https://media.istockphoto.com/id/1332104926/vector/a-symbol-of-the-human-heart-vector-paper-cut-icon-of-the-inner-heart-of-a-human-organ.jpg?s=612x612&w=0&k=20&c=OsMGO9lAYTUMg_IyM5ngH8eVTVhacAew77D1WTDmTAU=" alt="">
+                    <h3>Heart Disease</h3>
+                    <button><a href="http://localhost:8501/">Track</a></button>
+                </div>
+            </div>
+            <!-- streamlit run "C:\Users\devup\Downloads\multiple-disease-prediction-streamlit-app-main\app.py" -->
+          </div>
+              <footer class="footer">
+                    <p>&copy; 2024 HealthTech Solutions. All rights reserved.</p>
+                    <p>Designed by <a href="https://yourwebdesigner.com">Your Web Designer</a></p>
+              </footer>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+<script>
+  function showMapLabs() {
+    if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(
+position => {
+const { latitude, longitude } = position.coords;
+
+// Construct the Google Maps link with the search query for hospitals
+const googleMapsLinkLabs = `https://www.google.com/maps/search/labs/@${latitude},${longitude},15z`;
+// Open the link in a new tab or window
+window.open(googleMapsLinkLabs, '_blank');
+},
+error => {
+console.error('Error getting geolocation:', error.message);
+// Handle error (e.g., display a message to the user)
+},
+{ enableHighAccuracy: true, timeout: 10000 } // Timeout in milliseconds (adjust as needed)
+);
+} else {
+console.error('Geolocation is not supported by your browser');
+// Handle lack of geolocation support (e.g., display a message to the user)
+}
+}
+
+  function showMaphospital() {
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(
+position => {
+const { latitude, longitude } = position.coords;
+
+// Construct the Google Maps link with the search query for hospitals
+const googleMapsLinkHospital = 'https://www.google.com/maps/search/hospitals/@${latitude},${longitude},15z';
+// Open the link in a new tab or window
+window.open(googleMapsLinkHospital, '_blank');
+},
+error => {
+console.error('Error getting geolocation:', error.message);
+// Handle error (e.g., display a message to the user)
+},
+{ enableHighAccuracy: true, timeout: 10000 } // Timeout in milliseconds (adjust as needed)
+);
+} else {
+console.error('Geolocation is not supported by your browser');
+// Handle lack of geolocation support (e.g., display a message to the user)
+}
+}
+let map=document.querySelector('.map');
+map.addEventListener("click", showMaphospital);
+let lab=document.querySelector('.lab');
+lab.addEventListener("click", showMapLabs);
+</script>
+</html>

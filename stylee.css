@@ -1,0 +1,216 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .mt{
+    color: #e0e0e0;
+    font-size: 3rem;
+  }
+  html,
+  body {
+    height: 100%;
+    width: 100%;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    font-family: 'Roboto', sans-serif;
+  }
+  .line{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    margin-bottom: 2rem;
+  }
+  nav {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    color: white;
+  }
+  .leftnav a{
+    font-size: 2rem;
+    text-decoration: none;
+    color: #e0e0e0;
+  }
+  .rightnav {
+    display: flex;
+    gap: 1rem;
+    
+  }
+  .rightnav a {
+    text-decoration: none;
+    color: white;
+    font-size: larger;
+    transition: 0.3s ease-in;
+  }
+  .rightnav a:hover {
+    
+    color: white;
+    font-size: x-large;
+    color: #032b57;
+    
+    
+  }
+  .body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .banner img {
+    width: 60%;
+    height: 30%;
+    margin-left: 20rem;
+    margin-bottom: 3rem;
+    border-radius: 12px
+  }
+  .banner{
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(9, 9, 121, 1) 35%,
+      rgba(0, 212, 255, 1) 100%
+    );
+  }
+  
+  /* code of card */
+  .card img {
+    margin-bottom: 10px;
+    height: 12rem;
+    object-fit: cover;
+  
+    width: 100%;
+    border-radius: 15px;
+  }
+  h2 {
+    color: black;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size:3rem;
+  }
+  
+  .card {
+    margin:20px 0;
+    height: 20rem;
+    width: 20rem;
+    background-color: beige;
+    /* padding: 10px; */
+    border-radius: 15px;
+  transition: 0.3s ease-in;
+    /* box-shadow: 2px 2px 42px #aaaaaa, -2px -2px 42px #ffffff; */
+  }
+  .heading {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+  .diseasetracker{
+    padding-bottom: 20px;
+  }
+  .diseasetracker h2 {
+    margin: 4rem;
+    color: white;
+    font-size: 2rem;
+  }
+  .circles {
+    display: flex;
+    justify-content: space-around;
+  }
+  .circle img {
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    object-fit: cover;
+  
+    background: #e0e0e0;
+    /* box-shadow: 24px 24px 47px #cccccc, -24px -24px 47px #f4f4f4; */
+  }
+  .circle {
+    border-radius: 50%;
+    text-align: center;
+  }
+  .circle h3 {
+    margin-top: 2rem;
+    color: white;
+    font-size: x-large;
+  }
+  .circle button {
+    margin-top: 2rem;
+    height: 2rem;
+    width: 7rem;
+    background-color: darkblue;
+    border-radius: 12px;
+  }
+  .circle button{
+    transition: 0.3s ease-in-out;
+    
+  }
+  .circle a {
+    color: white;
+    text-decoration: none;
+  }
+  .circle button:hover {
+    background-color: rgb(36, 176, 231);
+    font-weight: 500;
+    transform: scale(1.2);
+    transition: ease-in-out;
+    cursor: pointer;
+  }
+  
+  .heading h2{
+    font-size: 1rem;
+    padding: 10px 10px;
+    transition: 0.3s ease-in;
+  }
+  .card:hover{
+    transform: scale(1.2);
+    box-shadow: 0px 17px 19px -3px rgba(0,0,0,0.1);
+  }
+  .heading h2:hover{
+      font-size: 1.2rem;
+    cursor: pointer
+  }
+  /* GPT FOOTER */
+  .footer {
+    background-color: #f0f0f0;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    color: #666;
+    font-size: 14px;
+}
+
+.footer a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
